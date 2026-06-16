@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Branded AI Claude Course — Mobile Editing Club</title>
+  <title>Branded AI Claude Course — Plan With Isaac</title>
+  <meta name="description" content="Learn how to use Claude to generate images, videos, ads, and designs at scale. The step-by-step content system for brands and creators. $299 launch price." />
+  <meta property="og:title" content="Branded AI Claude Course — Plan With Isaac" />
+  <meta property="og:description" content="Scale your brand's content production with Claude. Used by 1,300+ brands and creators." />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="https://planwithisaac.com/og-image.jpg" /> -->
+  <!-- <link rel="icon" href="/favicon.ico" /> -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Space Grotesk', system-ui, sans-serif;
-      background: #FAF8F4;
-      color: #1C1409;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #ffffff;
+      color: #0a0a0a;
       line-height: 1.55;
     }
     img { max-width: 100%; display: block; }
@@ -21,351 +27,630 @@
 
     /* ── Colour tokens ── */
     :root {
-      --bg:        #FAF8F4;
-      --dark:      #1C1409;
-      --terra:     #C4603A;   /* terracotta / rust */
-      --terra-lt:  #E8C4B0;
-      --blue:      #7AAFD4;
-      --blue-dk:   #4A85B5;
-      --charcoal:  #2D2219;
-      --tan:       #E8DDD0;
-      --beige:     #EDE8DF;
-      --star:      #E8932A;
-      --green:     #2D9B5A;
-      --white:     #FFFFFF;
-      --border:    #E2DDD5;
-      --max:       760px;    /* mobile-first max width */
+      --bg:        #ffffff;
+      --bg-subtle: #f7f8fc;
+      --dark:      #0a0a0a;
+      --mid:       #1a1a2e;
+      --blue:      #2563EB;
+      --blue-lt:   #dbeafe;
+      --blue-dk:   #1d4ed8;
+      --muted:     #6b7280;
+      --border:    #e5e7eb;
+      --white:     #ffffff;
+      --max:       720px;
     }
 
     /* ── Utility ── */
     .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
-    .btn-dark {
-      display: block;
-      width: 100%;
-      background: var(--dark);
-      color: #fff;
-      text-align: center;
-      padding: 16px;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .btn-terra {
+
+    .btn-primary {
       display: inline-block;
-      background: var(--terra);
+      background: var(--blue);
       color: #fff;
       padding: 14px 28px;
       border-radius: 8px;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: .95rem;
+      letter-spacing: -.01em;
+      cursor: pointer;
+      transition: background .15s;
     }
-    .stars { color: var(--star); font-size: .95rem; }
+    .btn-primary:hover { background: var(--blue-dk); }
+
+    .btn-primary-block {
+      display: block;
+      width: 100%;
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: .95rem;
+      letter-spacing: -.01em;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .btn-primary-block:hover { background: var(--blue-dk); }
+
+    .btn-outline {
+      display: block;
+      width: 100%;
+      background: transparent;
+      color: var(--dark);
+      border: 1.5px solid var(--border);
+      text-align: center;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .9rem;
+      margin-bottom: 24px;
+      transition: border-color .15s;
+    }
+    .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
+
+    /* Stars */
+    .stars { color: #f59e0b; font-size: .9rem; letter-spacing: .05em; }
+
+    /* Section label */
+    .label {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
 
     /* ── NAV ── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(250,248,244,.95);
-      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
-      padding: 14px 20px;
+      padding: 0 20px;
       display: flex; align-items: center; justify-content: space-between;
-      max-width: 100%;
+      height: 58px;
     }
     .nav-logo {
-      font-size: .75rem;
+      font-size: .8rem;
       font-weight: 800;
-      letter-spacing: .12em;
+      letter-spacing: .08em;
       text-transform: uppercase;
-      line-height: 1.2;
       color: var(--dark);
     }
-    .nav-enroll {
-      background: var(--dark);
-      color: #fff;
-      padding: 9px 22px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: .9rem;
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
+    .nav-price {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .nav-enroll {
+      background: var(--blue);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: .85rem;
+      transition: background .15s;
+    }
+    .nav-enroll:hover { background: var(--blue-dk); }
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(160deg, #7AAFD4 0%, #5a9bc8 50%, #4a8abf 100%);
-      padding: 36px 20px 0;
+      background: var(--mid);
+      padding: 64px 24px 0;
       max-width: var(--max);
       margin: 0 auto;
       overflow: hidden;
-      border-radius: 0 0 16px 16px;
+      border-radius: 0 0 20px 20px;
     }
-    .hero-text { color: #fff; margin-bottom: 24px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37,99,235,.25);
+      border: 1px solid rgba(37,99,235,.4);
+      color: #93c5fd;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #3b82f6;
+    }
+    .hero-text { color: #fff; margin-bottom: 32px; }
     .hero-text h1 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 12px;
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      margin-bottom: 16px;
+    }
+    .hero-text h1 em {
+      font-style: normal;
+      color: #60a5fa;
     }
     .hero-text p {
       font-size: 1rem;
-      opacity: .9;
-      max-width: 380px;
-      margin-bottom: 20px;
+      color: rgba(255,255,255,.65);
+      max-width: 400px;
+      margin-bottom: 28px;
+      line-height: 1.65;
+    }
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .hero-trust .stars { font-size: .8rem; }
+    .hero-trust-sep {
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.3);
+    }
+    .hero-trust span {
+      font-size: .8rem;
+      color: rgba(255,255,255,.55);
+      font-weight: 500;
     }
     .hero-img {
       width: 100%;
-      max-width: 480px;
+      max-width: 500px;
       margin: 0 auto;
-      display: block;
-      /* Placeholder sky-blue image with woman + phone */
-      background: linear-gradient(180deg, #7AAFD4 0%, #9EC8E4 100%);
-      height: 320px;
-      border-radius: 8px 8px 0 0;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-bottom: none;
+      height: 280px;
+      border-radius: 10px 10px 0 0;
       display: flex; align-items: center; justify-content: center;
-      font-size: 5rem;
+      font-size: 4rem;
+      /* Replace with: <img src="hero.jpg" alt="Course preview" style="width:100%;height:100%;object-fit:cover;border-radius:10px 10px 0 0;" /> */
     }
-    .hero-proof {
-      background: rgba(255,255,255,.15);
-      border-radius: 10px;
-      padding: 12px 16px;
+
+    /* ── LOGOS / TOOLS STRIP ── */
+    .tools-strip {
+      padding: 32px 20px;
+      max-width: var(--max);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .tools-strip p {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .tools-row {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-top: 20px;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
     }
-    .avatars { display: flex; }
-    .avatars span {
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      background: var(--terra);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .65rem; font-weight: 700; color: #fff;
-      margin-left: -8px;
+    .tool-tag {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: .82rem;
+      font-weight: 600;
+      color: #374151;
+      background: #fff;
     }
-    .avatars span:first-child { margin-left: 0; }
-    .proof-text { color: #fff; font-size: .8rem; }
-    .proof-text .stars { display: block; font-size: .85rem; }
+    .tool-tag-icon { font-size: 1rem; }
 
     /* ── MID STATEMENT ── */
-    .statement { padding: 56px 20px; text-align: center; }
+    .statement {
+      padding: 64px 20px;
+      text-align: center;
+      background: var(--bg-subtle);
+    }
     .statement h2 {
       font-size: 2rem;
-      font-weight: 800;
-      line-height: 1.15;
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -.03em;
       margin-bottom: 14px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .statement p { font-size: 1rem; color: #5C4A3A; max-width: 460px; margin: 0 auto; }
+    .statement p {
+      font-size: .95rem;
+      color: var(--muted);
+      max-width: 420px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
 
     /* ── FEATURE CARDS ── */
-    .features { padding: 0 20px 56px; max-width: var(--max); margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+    .features {
+      padding: 64px 20px;
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .features-heading {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .features-heading h2 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: 8px;
+    }
+    .features-heading p {
+      font-size: .9rem;
+      color: var(--muted);
+    }
 
     .feat-card {
-      border-radius: 16px;
-      padding: 32px 28px 28px;
-      overflow: hidden;
+      border-radius: 14px;
+      padding: 28px 24px;
+      border: 1px solid var(--border);
     }
-    .feat-card h3 { font-size: 1.6rem; font-weight: 800; line-height: 1.2; margin-bottom: 12px; }
-    .feat-card p  { font-size: .95rem; line-height: 1.6; margin-bottom: 20px; }
-    .feat-card.tan      { background: var(--tan);     color: var(--dark); }
-    .feat-card.terra    { background: var(--terra);   color: #fff; }
-    .feat-card.blue     { background: var(--blue);    color: #fff; }
-    .feat-card.charcoal { background: var(--charcoal);color: #fff; }
-    .feat-card.beige    { background: var(--beige);   color: var(--dark); }
+    .feat-card.dark-card {
+      background: var(--mid);
+      color: #fff;
+      border-color: transparent;
+    }
+    .feat-card.blue-card {
+      background: var(--blue);
+      color: #fff;
+      border-color: transparent;
+    }
+    .feat-card.light-card {
+      background: var(--bg-subtle);
+      color: var(--dark);
+    }
+    .feat-card.white-card {
+      background: #fff;
+      color: var(--dark);
+    }
 
-    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .feat-tag {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      opacity: .55;
+    }
+    .feat-card h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -.02em;
+      margin-bottom: 10px;
+    }
+    .feat-card p {
+      font-size: .88rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      opacity: .8;
+    }
+
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
     .check-list li {
-      display: flex; gap: 10px; align-items: flex-start; font-size: .9rem;
+      display: flex; gap: 9px; align-items: flex-start; font-size: .87rem;
     }
     .check-list li::before {
       content: "";
-      width: 20px; height: 20px;
+      width: 18px; height: 18px;
       border-radius: 4px;
-      background: var(--terra);
       flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 7L5.5 10L11.5 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-size: 14px;
+      background-size: 12px;
       background-repeat: no-repeat;
       background-position: center;
-      background-color: var(--terra);
+      background-color: var(--blue);
       margin-top: 1px;
     }
-    .feat-card.charcoal .check-list li::before { background-color: var(--terra); }
-    .feat-card.terra    .check-list li::before { background-color: rgba(255,255,255,.3); }
+    .feat-card.dark-card .check-list li::before,
+    .feat-card.blue-card .check-list li::before {
+      background-color: rgba(255,255,255,.25);
+    }
 
-    /* Mock screenshot placeholders */
-    .mockup {
-      border-radius: 10px;
-      overflow: hidden;
-      background: rgba(255,255,255,.2);
-      height: 180px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .8rem;
-      color: rgba(255,255,255,.6);
-      margin-top: 8px;
+    .feat-result {
+      margin-top: 18px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: .82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .feat-card.tan .mockup, .feat-card.beige .mockup {
-      background: rgba(255,255,255,.6);
-      color: #888;
-    }
-    .mockup-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px;
-    }
-    .mockup-grid .mockup { height: 120px; }
+    .feat-card.dark-card .feat-result,
+    .feat-card.blue-card .feat-result { background: rgba(255,255,255,.12); color: rgba(255,255,255,.85); }
+    .feat-card.light-card .feat-result,
+    .feat-card.white-card .feat-result { background: var(--blue-lt); color: var(--blue-dk); }
 
-    /* ── SOCIAL PROOF BANNER ── */
-    .proof-banner {
-      text-align: center;
-      padding: 48px 20px;
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--dark);
+      padding: 40px 20px;
+    }
+    .stats-inner {
       max-width: var(--max);
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
     }
-    .proof-banner .avatars { justify-content: center; margin-bottom: 10px; }
-    .proof-banner .avatars span { margin-left: -10px; width: 38px; height: 38px; font-size: .7rem; }
-    .proof-banner .avatars span:first-child { margin-left: 0; }
-    .proof-banner p { font-size: .9rem; color: #5C4A3A; margin-bottom: 24px; }
-    .proof-banner h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 28px;
+    .stat-item { text-align: center; }
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -.04em;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-number em {
+      font-style: normal;
+      color: #60a5fa;
+    }
+    .stat-label {
+      font-size: .78rem;
+      color: rgba(255,255,255,.45);
+      font-weight: 500;
     }
 
     /* ── TESTIMONIALS ── */
-    .testimonials { padding: 0 20px 56px; max-width: var(--max); margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
-    .testi {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px;
+    .testimonials-section {
+      padding: 64px 20px;
+      max-width: var(--max);
+      margin: 0 auto;
     }
-    .testi blockquote { font-size: .95rem; color: var(--dark); margin-bottom: 20px; line-height: 1.6; }
-    .testi-person { display: flex; gap: 12px; align-items: center; }
+    .testimonials-section .section-header {
+      margin-bottom: 28px;
+    }
+    .testimonials-section .section-header h2 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: 4px;
+    }
+    .testimonials-section .section-header p {
+      font-size: .88rem;
+      color: var(--muted);
+    }
+    .testimonials { display: flex; flex-direction: column; gap: 10px; }
+    .testi {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .testi-stars { margin-bottom: 10px; }
+    .testi blockquote {
+      font-size: .9rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.65;
+      font-weight: 500;
+    }
+    .testi-person { display: flex; gap: 10px; align-items: center; }
     .testi-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--tan);
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--blue-lt);
       overflow: hidden;
       flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
-    .testi-person strong { display: block; font-size: .95rem; font-weight: 700; }
-    .testi-person span   { font-size: .82rem; color: #7A6A5A; }
+    .testi-person strong { display: block; font-size: .88rem; font-weight: 700; }
+    .testi-person span   { font-size: .78rem; color: var(--muted); }
 
     /* ── CTA STATEMENT ── */
     .cta-statement {
       text-align: center;
-      padding: 48px 20px 16px;
+      padding: 64px 20px 24px;
       max-width: var(--max);
       margin: 0 auto;
     }
-    .cta-statement h2 { font-size: 2.1rem; font-weight: 800; line-height: 1.2; }
+    .cta-statement h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -.03em;
+    }
 
     /* ── PRICING ── */
-    .pricing { padding: 24px 20px 56px; max-width: var(--max); margin: 0 auto; }
+    .pricing {
+      padding: 24px 20px 64px;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
     .price-card {
-      background: var(--white);
-      border: 1px solid var(--border);
+      background: #fff;
+      border: 1.5px solid var(--border);
       border-radius: 16px;
       overflow: hidden;
     }
-    .price-img {
-      width: 100%;
-      height: 220px;
-      background: linear-gradient(135deg, #7AAFD4, #5a9bc8);
-      display: flex; align-items: flex-end; padding: 20px;
+    .price-header {
+      background: var(--mid);
+      padding: 28px 24px;
       position: relative;
     }
-    .price-img-text h3 { font-size: 2rem; font-weight: 800; color: #fff; line-height: 1.1; }
-    .price-img-text span { font-size: 1.3rem; color: rgba(255,255,255,.6); }
-    .price-logo {
-      position: absolute; bottom: 20px; left: 20px;
-      width: 40px; height: 40px;
-      background: var(--white);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem;
-    }
-    .price-body { padding: 24px; }
-    .price-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; }
-    .price-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
-    .price-meta .stars { font-size: .9rem; }
-    .price-meta span  { font-size: .85rem; color: #5C4A3A; }
-    .price-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
-    .price-old { font-size: 1.2rem; color: #aaa; text-decoration: line-through; }
-    .price-now { font-size: 1.5rem; font-weight: 800; }
-    .launch-badge {
-      background: var(--green);
-      color: #fff;
-      font-size: .7rem;
-      font-weight: 800;
-      letter-spacing: .06em;
+    .price-header-tag {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
       text-transform: uppercase;
-      padding: 4px 10px;
+      color: #60a5fa;
+      margin-bottom: 8px;
+    }
+    .price-header h3 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+    }
+    .price-header-badge {
+      position: absolute;
+      top: 24px; right: 24px;
+      background: var(--blue);
+      color: #fff;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 5px 10px;
       border-radius: 6px;
     }
-    .price-desc { font-size: .9rem; color: #5C4A3A; margin-bottom: 20px; line-height: 1.5; }
-    .price-body .btn-dark { margin-bottom: 10px; }
-    .btn-secondary {
-      display: block;
-      width: 100%;
-      background: var(--beige);
-      color: var(--dark);
-      text-align: center;
-      padding: 14px;
-      border-radius: 10px;
+    .price-body { padding: 24px; }
+    .price-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+    .price-meta span { font-size: .82rem; color: var(--muted); }
+    .price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+    .price-old { font-size: 1.1rem; color: #9ca3af; text-decoration: line-through; }
+    .price-now { font-size: 2rem; font-weight: 900; letter-spacing: -.04em; color: var(--dark); }
+    .price-urgency {
+      font-size: .8rem;
+      color: #dc2626;
       font-weight: 600;
-      font-size: .9rem;
+      margin-bottom: 18px;
+    }
+    .price-desc {
+      font-size: .88rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .price-body .btn-primary-block { margin-bottom: 10px; }
+
+    /* Guarantee */
+    .guarantee {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 14px 16px;
       margin-bottom: 24px;
     }
-    .including { font-weight: 700; font-size: .9rem; margin-bottom: 14px; }
-    .inc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .inc-list li {
-      display: flex; gap: 10px; align-items: flex-start; font-size: .9rem; color: var(--dark);
+    .guarantee-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .guarantee-text strong { display: block; font-size: .88rem; font-weight: 700; color: #15803d; margin-bottom: 2px; }
+    .guarantee-text p { font-size: .8rem; color: #166534; line-height: 1.5; }
+
+    /* Curriculum */
+    .curriculum-title { font-weight: 700; font-size: .88rem; margin-bottom: 12px; }
+    .curriculum-stats {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
     }
-    .inc-list li::before {
-      content: "";
-      width: 20px; height: 20px;
-      border-radius: 4px;
-      background-color: var(--terra);
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 7L5.5 10L11.5 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-size: 14px;
-      background-repeat: no-repeat;
-      background-position: center;
+    .curriculum-stat {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .8rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .module-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .module-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      font-size: .85rem;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+    }
+    .module-item:nth-child(odd) { background: var(--bg-subtle); }
+    .module-item:last-child { border-bottom: none; }
+    .module-num {
+      width: 22px; height: 22px;
+      border-radius: 6px;
+      background: var(--blue-lt);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .68rem; font-weight: 800;
       flex-shrink: 0;
-      margin-top: 1px;
+      color: var(--blue-dk);
     }
-    .price-testimonial {
-      margin-top: 24px;
-      padding-top: 20px;
+    .module-name { flex: 1; font-weight: 600; color: var(--dark); }
+    .module-count { font-size: .75rem; color: var(--muted); }
+
+    .price-divider {
+      border: none;
       border-top: 1px solid var(--border);
+      margin: 20px 0;
     }
-    .price-testimonial p { font-size: .85rem; color: #5C4A3A; line-height: 1.6; margin-bottom: 12px; }
+
+    /* Pricing testimonial */
+    .price-testimonial p { font-size: .83rem; color: var(--muted); line-height: 1.65; margin-bottom: 12px; font-style: italic; }
     .price-testi-person { display: flex; align-items: center; gap: 8px; }
     .price-testi-person .avatar {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: var(--terra);
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1rem;
+      font-size: .72rem; font-weight: 800;
       flex-shrink: 0;
     }
-    .price-testi-person .stars { font-size: .8rem; display: block; }
-    .price-testi-person strong { font-size: .85rem; }
-    .price-testi-person em { font-size: .8rem; color: #7A6A5A; font-style: normal; }
+    .price-testi-person .stars { font-size: .75rem; display: block; }
+    .price-testi-person strong { font-size: .82rem; }
+    .price-testi-person em { font-size: .78rem; color: var(--muted); font-style: normal; }
 
     /* ── MOVEMENT ── */
     .movement {
-      padding: 48px 20px 20px;
+      background: var(--bg-subtle);
+      padding: 64px 20px;
+    }
+    .movement-inner {
       max-width: var(--max);
       margin: 0 auto;
       text-align: center;
     }
-    .movement h2 { font-size: 2rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
-    .community-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 20px; }
+    .movement-inner h2 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -.03em;
+      margin-bottom: 6px;
+    }
+    .movement-inner p { font-size: .9rem; color: var(--muted); margin-bottom: 24px; }
+    .community-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
     .community-grid .photo {
       border-radius: 10px;
-      height: 120px;
-      background: var(--tan);
+      height: 110px;
+      background: var(--border);
       overflow: hidden;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.8rem;
@@ -374,82 +659,168 @@
     /* ── INSTRUCTORS ── */
     .instructors {
       max-width: var(--max); margin: 0 auto;
-      padding: 48px 20px;
+      padding: 64px 20px;
     }
-    .instructors h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 16px; }
-    .instructors p  { font-size: .95rem; color: #5C4A3A; line-height: 1.7; margin-bottom: 14px; }
-    .instructor-photo {
-      width: 100%; height: 320px;
+    .instructors .section-header { margin-bottom: 20px; }
+    .instructors .section-header h2 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: 4px;
+    }
+    .instructors .section-header p { font-size: .88rem; color: var(--muted); }
+    .instructor-card {
+      background: #fff;
+      border: 1px solid var(--border);
       border-radius: 14px;
-      background: var(--beige);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .9rem; color: #9A8A7A;
-      margin-top: 24px;
       overflow: hidden;
+    }
+    .instructor-photo {
+      width: 100%; height: 260px;
+      background: var(--bg-subtle);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem; color: var(--muted);
+      /* Replace with: <img src="adriana-and-nik.jpg" alt="Adriana and Nik" style="width:100%;height:100%;object-fit:cover;" /> */
+    }
+    .instructor-body { padding: 22px; }
+    .instructor-body h3 { font-size: 1.15rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: 2px; }
+    .instructor-role { font-size: .75rem; color: var(--blue); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 14px; }
+    .instructor-body p { font-size: .88rem; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+    .instructor-creds { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .instructor-creds li {
+      display: flex; gap: 8px; align-items: flex-start; font-size: .85rem; color: #374151;
+    }
+    .instructor-creds li::before {
+      content: "→";
+      font-weight: 700;
+      color: var(--blue);
+      flex-shrink: 0;
     }
 
     /* ── FAQ ── */
     .faq-section {
-      max-width: var(--max); margin: 0 auto;
-      padding: 48px 20px;
-      text-align: center;
+      background: var(--bg-subtle);
+      padding: 64px 20px;
     }
-    .faq-section h2  { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
-    .faq-sub { font-size: .95rem; color: #5C4A3A; margin-bottom: 28px; }
+    .faq-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .faq-inner .section-header { margin-bottom: 28px; text-align: center; }
+    .faq-inner .section-header h2 { font-size: 1.6rem; font-weight: 900; letter-spacing: -.03em; margin-bottom: 4px; }
+    .faq-inner .section-header p { font-size: .88rem; color: var(--muted); }
     .faq-list { text-align: left; display: flex; flex-direction: column; }
     .faq-list details {
       border-top: 1px solid var(--border);
-      padding: 18px 0;
+      padding: 16px 0;
+      background: transparent;
     }
     .faq-list details:last-child { border-bottom: 1px solid var(--border); }
     .faq-list summary {
-      font-weight: 600; font-size: .95rem; color: var(--dark);
+      font-weight: 600; font-size: .9rem; color: var(--dark);
       cursor: pointer; list-style: none;
       display: flex; justify-content: space-between; align-items: center;
+      gap: 12px;
     }
     .faq-list summary::-webkit-details-marker { display: none; }
-    .faq-icon { font-size: 1.3rem; color: var(--dark); font-weight: 300; flex-shrink: 0; margin-left: 12px; }
-    .faq-list details[open] .faq-icon { content: "−"; }
-    .faq-list details p { margin-top: 12px; font-size: .9rem; color: #5C4A3A; line-height: 1.65; }
+    .faq-list summary::after {
+      content: "+";
+      font-size: 1.3rem;
+      font-weight: 300;
+      flex-shrink: 0;
+      color: var(--muted);
+      line-height: 1;
+    }
+    .faq-list details[open] summary::after { content: "−"; color: var(--blue); }
+    .faq-list details p { margin-top: 10px; font-size: .87rem; color: var(--muted); line-height: 1.7; }
 
     /* ── FINAL CTA ── */
-    .final-wrap { padding: 20px 20px 40px; max-width: var(--max); margin: 0 auto; }
+    .final-section { padding: 24px 20px 64px; max-width: var(--max); margin: 0 auto; }
     .final-card {
-      background: var(--charcoal);
-      border-radius: 20px;
-      padding: 48px 32px;
+      background: var(--mid);
+      border-radius: 18px;
+      padding: 48px 28px;
       text-align: center;
       color: #fff;
+      position: relative;
+      overflow: hidden;
     }
-    .final-card h2 { font-size: 1.9rem; font-weight: 800; line-height: 1.2; margin-bottom: 14px; }
-    .final-card p  { font-size: .95rem; color: rgba(255,255,255,.7); margin-bottom: 28px; }
+    .final-card::before {
+      content: "";
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(37,99,235,.25);
+      pointer-events: none;
+    }
+    .final-card h2 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+    .final-card p { font-size: .9rem; color: rgba(255,255,255,.55); margin-bottom: 24px; }
+    .final-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .final-price-old { font-size: .95rem; color: rgba(255,255,255,.3); text-decoration: line-through; }
+    .final-price-now { font-size: 1.4rem; font-weight: 900; color: #fff; letter-spacing: -.03em; }
     .btn-final {
       display: inline-block;
-      background: transparent;
-      border: 1.5px solid rgba(255,255,255,.6);
+      background: var(--blue);
       color: #fff;
-      padding: 13px 36px;
+      padding: 14px 36px;
       border-radius: 8px;
       font-weight: 700;
       font-size: .95rem;
+      transition: background .15s;
+    }
+    .btn-final:hover { background: var(--blue-dk); }
+    .final-sub {
+      font-size: .75rem;
+      color: rgba(255,255,255,.35);
+      margin-top: 14px;
     }
 
     /* ── FOOTER ── */
     footer {
-      text-align: center;
-      padding: 28px 20px 40px;
-      font-size: .8rem;
-      color: #9A8A7A;
       border-top: 1px solid var(--border);
+      padding: 28px 20px 40px;
+      text-align: center;
     }
-    .social-icons { display: flex; justify-content: center; gap: 20px; margin-bottom: 16px; }
-    .social-icons a { color: var(--dark); display: flex; align-items: center; }
+    .footer-logo {
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .social-icons { display: flex; justify-content: center; gap: 16px; margin-bottom: 16px; }
+    .social-icons a {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      color: var(--dark);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .15s, color .15s;
+    }
+    .social-icons a:hover { border-color: var(--blue); color: var(--blue); }
+    footer p { font-size: .78rem; color: var(--muted); }
 
-    /* ── Responsive: wider screens ── */
+    /* ── Responsive ── */
     @media (min-width: 800px) {
       body { max-width: 800px; margin: 0 auto; }
       .hero { border-radius: 16px; margin: 16px auto; }
-      .feat-card h3 { font-size: 1.9rem; }
+      .hero-text h1 { font-size: 3.2rem; }
+      .feat-card h3 { font-size: 1.7rem; }
+      .stats-inner { grid-template-columns: 1fr 1fr 1fr 1fr; }
     }
   </style>
 </head>
@@ -457,226 +828,283 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">MOBILE<br/>EDITING<br/>CLUB</div>
-  <a href="#pricing" class="nav-enroll">Enroll</a>
+  <div class="nav-logo">Plan With Isaac</div>
+  <div class="nav-right">
+    <span class="nav-price">$299 launch price</span>
+    <!-- TODO: Replace href with your checkout URL -->
+    <a href="YOUR_CHECKOUT_URL" class="nav-enroll">Enroll</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-text">
-    <h1>Branded AI Claude<br/>Course</h1>
-    <p>Learn how to use Claude to scale content production for your brand.</p>
-    <a href="#pricing" class="btn-terra">Enroll Today (Launch Price)</a>
-  </div>
-  <!-- Replace this div with <img src="your-hero-image.jpg" alt="Hero" /> -->
-  <div class="hero-img">🤳</div>
-  <div class="hero-proof">
-    <div class="avatars">
-      <span>MW</span><span>JW</span><span>MP</span><span>TM</span><span>+</span>
-    </div>
-    <div class="proof-text">
+    <div class="hero-badge"><span class="hero-badge-dot"></span>Branded AI Claude Course</div>
+    <h1>Your Brand's Content<br/>Machine, Powered<br/>by <em>Claude</em></h1>
+    <p>The step-by-step system to generate images, videos, ads, and designs at scale — without an agency, without a big team.</p>
+    <div class="hero-trust">
       <span class="stars">★★★★★</span>
-      Join 1,300+ clients already trusting us.
+      <span class="hero-trust-sep"></span>
+      <span>1,300+ students</span>
+      <span class="hero-trust-sep"></span>
+      <span>Beginner friendly</span>
     </div>
+    <!-- TODO: Replace href with your checkout URL -->
+    <a href="YOUR_CHECKOUT_URL" class="btn-primary">Enroll Today — $299</a>
+  </div>
+  <!-- TODO: Replace with <img src="hero.jpg" alt="Course preview" style="width:100%;border-radius:10px 10px 0 0;" /> -->
+  <div class="hero-img">🤳</div>
+</div>
+
+<!-- TOOLS STRIP -->
+<div class="tools-strip">
+  <p>Tools you'll master inside</p>
+  <div class="tools-row">
+    <div class="tool-tag"><span class="tool-tag-icon">🤖</span> Claude</div>
+    <div class="tool-tag"><span class="tool-tag-icon">🎨</span> Figma</div>
+    <div class="tool-tag"><span class="tool-tag-icon">📋</span> Notion</div>
+    <div class="tool-tag"><span class="tool-tag-icon">🎬</span> Kling</div>
+    <div class="tool-tag"><span class="tool-tag-icon">🖼</span> Flux</div>
   </div>
 </div>
 
 <!-- MID STATEMENT -->
 <div class="statement">
-  <h2>Scale your brand's content<br/>production with Claude</h2>
-  <p>The way brands create content is shifting. Claude is the new center of it.</p>
+  <h2>Content production just changed. Here's how to win with it.</h2>
+  <p>Every brand that moves first on AI content will have an unfair advantage over those that wait. Claude is the engine. This course is the system.</p>
 </div>
 
 <!-- FEATURE CARDS -->
 <div class="features">
+  <div class="features-heading">
+    <span class="label">What you'll build</span>
+    <h2>7 modules. One complete<br/>content system.</h2>
+    <p>Each module is a workflow you can deploy in your brand immediately.</p>
+  </div>
 
-  <!-- 1. Generate Images & Videos -->
-  <div class="feat-card tan">
-    <h3>Generate Images<br/>&amp; Videos at Scale</h3>
-    <p>Generate multiple images and videos at the same time with Claude, connected to top AI models like Nano Banana 2 and Kling.</p>
+  <!-- 1. Image & Video -->
+  <div class="feat-card dark-card">
+    <div class="feat-tag">Module 3</div>
+    <h3>Generate Images &amp;<br/>Videos at Scale</h3>
+    <p>Claude connects to top AI image and video models, then orchestrates the full pipeline from brief to finished asset. No tool-switching, no manual uploads.</p>
     <ul class="check-list">
-      <li>Pulls images straight from your products folder</li>
-      <li>Full creative pipeline from brief to finished assets</li>
-      <li>Generating images for multiple products in one go</li>
-      <li>Exports, renames and formats images directly to your folder</li>
+      <li>Pull product images straight from your folder</li>
+      <li>Generate visuals for multiple products in a single run</li>
+      <li>Full pipeline from brief to finished, renamed, formatted files</li>
+      <li>Batch output what used to take a full day of production</li>
     </ul>
-    <div class="mockup-grid">
-      <div class="mockup">📁 Product folder</div>
-      <div class="mockup">🖼 Generated images</div>
-      <div class="mockup" style="grid-column:1/-1;height:100px;">Terminal / workflow view</div>
-    </div>
+    <div class="feat-result">⚡ What used to take a full day takes an afternoon.</div>
   </div>
 
   <!-- 2. Figma -->
-  <div class="feat-card terra">
+  <div class="feat-card blue-card">
+    <div class="feat-tag">Module 4</div>
     <h3>Let Claude Design<br/>in Figma</h3>
-    <p>Claude generates, edits, and iterates real designs directly in Figma. Ads, social posts, brand assets. No more design bottlenecks.</p>
-    <div class="mockup" style="height:200px;">🎨 Figma interface mockup</div>
+    <p>No more design bottlenecks. Claude generates, edits, and iterates real layouts directly inside Figma — ads, social posts, brand assets, all on-brand.</p>
+    <ul class="check-list">
+      <li>Creates frames, layouts, and copy from a single brief</li>
+      <li>Iterates in real time without you touching the tools</li>
+      <li>Stays on-brand because it works from your brand kit</li>
+      <li>Outputs ad variations, stories, and carousels in one go</li>
+    </ul>
+    <div class="feat-result">🎨 Your designer focuses on direction. Claude handles the repetition.</div>
   </div>
 
   <!-- 3. Notion -->
-  <div class="feat-card blue">
+  <div class="feat-card light-card">
+    <div class="feat-tag">Module 5</div>
     <h3>Turn Notion into Your<br/>Content HQ</h3>
-    <p>Let Claude write briefs, draft posts, and run your content calendar inside Notion. This is where the real time-saving happens.</p>
-    <div class="mockup" style="height:200px;">📋 Notion calendar table</div>
+    <p>Claude writes briefs, drafts posts, updates your content calendar, and tracks what's published — all inside Notion. This is where the real time-saving happens.</p>
+    <ul class="check-list">
+      <li>Writes and files content briefs automatically</li>
+      <li>Drafts posts, captions, and newsletters from your brand voice</li>
+      <li>Keeps your content calendar updated without manual entry</li>
+      <li>One system your whole team can work from</li>
+    </ul>
+    <div class="feat-result">📋 Your content calendar runs itself. You just approve and publish.</div>
   </div>
 
   <!-- 4. Ads -->
-  <div class="feat-card charcoal">
+  <div class="feat-card dark-card">
+    <div class="feat-tag">Module 6</div>
     <h3>Generate Ads at Scale</h3>
-    <p>Turn one product into 50 ad variations in an afternoon. Test faster, scale what works, and stop burning budget on production.</p>
+    <p>One product, 50 ad variations, one afternoon. Stop burning budget on slow production. Claude handles the volume so you can focus on what's winning.</p>
     <ul class="check-list">
-      <li>Generates multiple ad variants in one go</li>
-      <li>On-brand assets because it works from your guidelines</li>
-      <li>Covers the full process from brief to finished creative</li>
-      <li>Built for teams and founders who need volume</li>
+      <li>Generates multiple variants — hooks, angles, formats — in one go</li>
+      <li>On-brand because it builds from your actual brand guidelines</li>
+      <li>Full pipeline from brief to finished creative, ready to test</li>
+      <li>Built for founders and teams who need volume to find winners</li>
     </ul>
-    <div class="mockup-grid">
-      <div class="mockup">Ad 1</div>
-      <div class="mockup">Ad 2</div>
-      <div class="mockup">Ad 3</div>
-      <div class="mockup">Ad 4</div>
-    </div>
+    <div class="feat-result">📈 Test faster, find winners sooner, spend less on production.</div>
   </div>
 
   <!-- 5. Prompt Architecture -->
-  <div class="feat-card beige">
-    <h3>Claude-specific prompt<br/>architecture</h3>
-    <p>Learn the exact frameworks we use to get consistent, on-brand outputs every time. The foundation behind every workflow in this course.</p>
-    <div class="mockup-grid">
-      <div class="mockup" style="grid-column:1/-1;height:150px;">🎨 Brand colors &amp; typography guide</div>
-    </div>
+  <div class="feat-card white-card">
+    <div class="feat-tag">Module 2</div>
+    <h3>Claude-Specific Prompt<br/>Architecture</h3>
+    <p>Claude behaves differently from other AI tools. This module teaches the exact frameworks we use to get consistent, on-brand outputs every single time.</p>
+    <ul class="check-list">
+      <li>Encode your brand voice so Claude never drifts off it</li>
+      <li>Prompt structures that scale across every content type</li>
+      <li>Reusable templates for images, copy, design, and ads</li>
+      <li>Update your system prompts as your brand evolves</li>
+    </ul>
+    <div class="feat-result">🔧 Once your prompts are set, every output starts on-brand by default.</div>
   </div>
 
   <!-- 6. Repurpose -->
-  <div class="feat-card beige">
+  <div class="feat-card blue-card">
+    <div class="feat-tag">Module 7</div>
     <h3>Repurpose Content<br/>on Autopilot</h3>
-    <p>Claude repurposes one piece of content into carousels, Reels, ads, and newsletters, in any language and any format. Your brand voice, everywhere.</p>
-    <div class="mockup" style="height:200px;">📐 Multi-format content grid (9:16 · 3:4 · 1:1 · 16:9)</div>
+    <p>One piece of content becomes carousels, Reels scripts, ad copy, newsletters — in any language, any format. Your brand voice, everywhere, without extra hours.</p>
+    <ul class="check-list">
+      <li>Turns one post into 6 formats automatically</li>
+      <li>Translates into any language while keeping your brand tone</li>
+      <li>Adapts to platform-specific formats (9:16 · 3:4 · 1:1 · 16:9)</li>
+      <li>Connects to your Notion HQ so everything stays organised</li>
+    </ul>
+    <div class="feat-result">♻️ Create once. Publish everywhere. Claude handles the variations.</div>
   </div>
 
 </div>
 
-<!-- SOCIAL PROOF BANNER -->
-<div class="proof-banner">
-  <div class="avatars">
-    <span>MW</span><span>JW</span><span>MP</span><span>TM</span><span>CD</span><span>LL</span>
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number">1,300<em>+</em></div>
+      <div class="stat-label">Students enrolled</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><em>7</em></div>
+      <div class="stat-label">Hours of content</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><em>26</em></div>
+      <div class="stat-label">Lessons</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">★★★★★</div>
+      <div class="stat-label">Average rating</div>
+    </div>
   </div>
-  <p>Join 1,300+ clients already trusting us.</p>
-  <h2>Brands and Creators that<br/>already scaled their content<br/>production with AI</h2>
-  <a href="#pricing" class="btn-dark" style="max-width:240px;margin:0 auto;display:block;border-radius:10px;">Enroll today</a>
 </div>
 
 <!-- TESTIMONIALS -->
-<div class="testimonials">
-
-  <div class="testi">
-    <blockquote>"We replaced expensive product shoots with AI shop images that look just as professional. Updating our store visuals is faster and far more flexible."</blockquote>
-    <div class="testi-person">
-      <div class="testi-avatar">👩</div>
-      <div>
-        <strong>Mona Wiegand</strong>
-        <span>Brand Owner</span>
+<div class="testimonials-section">
+  <div class="section-header">
+    <span class="label">What students say</span>
+    <h2>Real results from real brands</h2>
+    <p>1,300+ brands and creators already use this system.</p>
+  </div>
+  <div class="testimonials">
+    <div class="testi">
+      <div class="testi-stars stars">★★★★★</div>
+      <blockquote>"We replaced expensive product shoots with AI images that look just as professional. Updating our store visuals is faster and far more flexible."</blockquote>
+      <div class="testi-person">
+        <div class="testi-avatar">👩</div>
+        <div><strong>Mona Wiegand</strong><span>Brand Owner</span></div>
+      </div>
+    </div>
+    <div class="testi">
+      <div class="testi-stars stars">★★★★★</div>
+      <blockquote>"We can now test creatives at scale without burning budget. AI visuals helped us cut ad costs while identifying winning ads much faster."</blockquote>
+      <div class="testi-person">
+        <div class="testi-avatar">👨</div>
+        <div><strong>Joey de Wit</strong><span>Agency Owner</span></div>
+      </div>
+    </div>
+    <div class="testi">
+      <div class="testi-stars stars">★★★★★</div>
+      <blockquote>"Our ads perform on a completely different level now. With AI-generated images and videos, we create scroll-stopping creatives that consistently outperform our old ads."</blockquote>
+      <div class="testi-person">
+        <div class="testi-avatar">👨</div>
+        <div><strong>Marian Pohl</strong><span>Agency Owner</span></div>
+      </div>
+    </div>
+    <div class="testi">
+      <div class="testi-stars stars">★★★★★</div>
+      <blockquote>"Launching campaigns is no longer a bottleneck. We create campaign visuals instantly, test multiple angles at once, and scale what works without delays."</blockquote>
+      <div class="testi-person">
+        <div class="testi-avatar">👨</div>
+        <div><strong>Tony Marchetti</strong><span>Agency Owner</span></div>
+      </div>
+    </div>
+    <div class="testi">
+      <div class="testi-stars stars">★★★★★</div>
+      <blockquote>"Mobile Editing Club has been a big help for our team. We've learned how to guide AI toward our vision, edit generations to match our product renders, and understand AI's limits so we don't waste time."</blockquote>
+      <div class="testi-person">
+        <div class="testi-avatar" style="background:var(--blue);color:#fff;font-size:.75rem;font-weight:800;">CD</div>
+        <div><strong>Cody Deer</strong><span>Deer Designstudio</span></div>
+      </div>
+    </div>
+    <div class="testi">
+      <div class="testi-stars stars">★★★★★</div>
+      <blockquote>"Video ads used to slow everything down. Now we generate, edit, and iterate high-performing video creatives in minutes, giving us way more freedom to test and scale fast."</blockquote>
+      <div class="testi-person">
+        <div class="testi-avatar">👨</div>
+        <div><strong>Lars Leitzig</strong><span>Agency Owner</span></div>
       </div>
     </div>
   </div>
-
-  <div class="testi">
-    <blockquote>"We can now test creatives at scale without burning budget. AI visuals helped us cut ad costs while identifying winning ads much faster."</blockquote>
-    <div class="testi-person">
-      <div class="testi-avatar">👨</div>
-      <div>
-        <strong>Joey de Wit</strong>
-        <span>Agency Owner</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="testi">
-    <blockquote>"Our ads perform on a completely different level now. With AI-generated images and videos, we create scroll-stopping creatives that look premium, feel native, and consistently outperform our old ads."</blockquote>
-    <div class="testi-person">
-      <div class="testi-avatar">👨</div>
-      <div>
-        <strong>Marian Pohl</strong>
-        <span>Agency Owner</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="testi">
-    <blockquote>"Launching campaigns is no longer a bottleneck. We create campaign visuals instantly, test multiple angles at once, and scale what works without delays or extra costs."</blockquote>
-    <div class="testi-person">
-      <div class="testi-avatar">👨</div>
-      <div>
-        <strong>Tony Marchetti</strong>
-        <span>Agency Owner</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="testi">
-    <blockquote>"Mobile Editing Club has been a big help for our team. We've learned how to guide AI toward our vision, edit generations to match our product renders, and understand AI's limits so we don't waste time. Excited to see what they release next."</blockquote>
-    <div class="testi-person">
-      <div class="testi-avatar" style="background:var(--terra);color:#fff;">CD</div>
-      <div>
-        <strong>Cody Deer</strong>
-        <span>Agency Owner</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="testi">
-    <blockquote>"Video ads used to slow everything down. Now we generate, edit, and iterate high-performing video creatives in minutes, giving us way more freedom to test and scale fast."</blockquote>
-    <div class="testi-person">
-      <div class="testi-avatar">👨</div>
-      <div>
-        <strong>Lars Leitzig</strong>
-        <span>Agency Owner</span>
-      </div>
-    </div>
-  </div>
-
 </div>
 
 <!-- CTA STATEMENT -->
 <div class="cta-statement">
-  <h2>Claude is changing<br/>how business works.<br/>Get on the right side<br/>of that.</h2>
+  <span class="label">The bottom line</span>
+  <h2>Claude is changing how<br/>business works. Get on<br/>the right side of that.</h2>
 </div>
 
 <!-- PRICING -->
 <div class="pricing" id="pricing">
   <div class="price-card">
-    <div class="price-img">
-      <div class="price-logo">✳️</div>
-      <div class="price-img-text" style="position:absolute;top:20px;left:20px;">
-        <h3>Branded AI<br/>Claude</h3>
-        <span>Course</span>
-      </div>
+    <div class="price-header">
+      <div class="price-header-tag">Branded AI Claude Course</div>
+      <h3>The complete<br/>content system</h3>
+      <div class="price-header-badge">LAUNCH PRICE</div>
     </div>
     <div class="price-body">
-      <p class="price-title">Branded AI Claude Course</p>
       <div class="price-meta">
         <span class="stars">★★★★★</span>
-        <span>Join 1,300+ clients already trusting us.</span>
+        <span>1,300+ students enrolled</span>
       </div>
       <div class="price-row">
         <span class="price-old">$399</span>
         <span class="price-now">$299</span>
-        <span class="launch-badge">LAUNCH PRICE</span>
       </div>
-      <p class="price-desc">Scale your brand's content production with Claude. Generate images, videos, ads, and designs at scale, all in one workflow.</p>
-      <a href="#" class="btn-dark">Enroll Now ($299)</a>
-      <a href="#" class="btn-secondary">Included in Branded AI Editing Course</a>
-      <p class="including">Including:</p>
-      <ul class="inc-list">
-        <li>AI Image and Video Generation with Claude</li>
-        <li>Figma Design Workflows with Claude</li>
-        <li>Notion Content HQ Setup</li>
-        <li>Ad Generation at Scale</li>
-        <li>Claude Prompting Frameworks</li>
-        <li>Content Repurposing and Translation Workflows</li>
-        <li>Connecting Claude to Nano Banana 2, Kling, and more</li>
+      <p class="price-urgency">⏳ Launch pricing ends soon — lock in your spot now.</p>
+      <p class="price-desc">The step-by-step system to scale your brand's content production with Claude. Images, videos, ads, and designs — all in one workflow.</p>
+      <!-- TODO: Replace href with your checkout URL -->
+      <a href="YOUR_CHECKOUT_URL" class="btn-primary-block">Enroll Now — $299</a>
+      <!-- TODO: Replace href with your bundle URL -->
+      <a href="YOUR_BUNDLE_URL" class="btn-outline">Also included in the Branded AI Editing Bundle</a>
+
+      <div class="guarantee">
+        <div class="guarantee-icon">🛡️</div>
+        <div class="guarantee-text">
+          <strong>30-Day Money-Back Guarantee</strong>
+          <p>Go through the course, apply the workflows. If you don't see results within 30 days, email us and we'll refund you in full — no questions asked.</p>
+        </div>
+      </div>
+
+      <p class="curriculum-title">What's inside — 7 modules:</p>
+      <div class="curriculum-stats">
+        <div class="curriculum-stat">📹 26 lessons</div>
+        <div class="curriculum-stat">⏱ ~7 hours of content</div>
+        <div class="curriculum-stat">♾️ Lifetime access</div>
+      </div>
+      <ul class="module-list">
+        <li class="module-item"><div class="module-num">1</div><span class="module-name">Claude Foundations &amp; Setup</span><span class="module-count">3 lessons</span></li>
+        <li class="module-item"><div class="module-num">2</div><span class="module-name">Prompt Architecture for Brands</span><span class="module-count">4 lessons</span></li>
+        <li class="module-item"><div class="module-num">3</div><span class="module-name">Image &amp; Video Generation at Scale</span><span class="module-count">5 lessons</span></li>
+        <li class="module-item"><div class="module-num">4</div><span class="module-name">Figma Design Workflows</span><span class="module-count">4 lessons</span></li>
+        <li class="module-item"><div class="module-num">5</div><span class="module-name">Notion Content HQ Setup</span><span class="module-count">3 lessons</span></li>
+        <li class="module-item"><div class="module-num">6</div><span class="module-name">Ad Generation at Scale</span><span class="module-count">4 lessons</span></li>
+        <li class="module-item"><div class="module-num">7</div><span class="module-name">Content Repurposing &amp; Translation</span><span class="module-count">3 lessons</span></li>
       </ul>
+
+      <hr class="price-divider" />
+
       <div class="price-testimonial">
         <p>"Mobile Editing Club has been a big help for our team. We've learned how to guide AI toward our vision, edit generations to match our product renders, and understand AI's limits so we don't waste time. Excited to see what they release next."</p>
         <div class="price-testi-person">
@@ -684,7 +1112,7 @@
           <div>
             <span class="stars">★★★★★</span>
             <strong>Cody Deer</strong>
-            <em>  Deer Designstudio</em>
+            <em>Deer Designstudio</em>
           </div>
         </div>
       </div>
@@ -694,87 +1122,120 @@
 
 <!-- MOVEMENT -->
 <div class="movement">
-  <h2>It's more than a club.<br/>It's a movement.</h2>
-  <div class="community-grid">
-    <!-- Row 1 -->
-    <div class="photo" style="background:#D4C5B5;">👩</div>
-    <div class="photo" style="background:#C4603A;">👩🏾</div>
-    <div class="photo" style="background:#1C1409;"></div>
-    <!-- Row 2 -->
-    <div class="photo" style="background:#B8A898;">🧍‍♀️</div>
-    <div class="photo" style="background:#D8CCBC;">👱‍♀️</div>
-    <div class="photo" style="background:#8A7868;">🧍‍♂️</div>
-    <!-- Row 3 -->
-    <div class="photo" style="background:#C8B8A8;">👩🏽</div>
-    <div class="photo" style="background:#6B8A5A;">🫙</div>
-    <div class="photo" style="background:#D0C0A8;">🪑</div>
-    <!-- Row 4 -->
-    <div class="photo" style="background:#1C1409;"></div>
-    <div class="photo" style="background:#B8A898;">👩🏾</div>
-    <div class="photo" style="background:#C4603A;">🧴</div>
+  <div class="movement-inner">
+    <span class="label">The community</span>
+    <h2>It's more than a course.<br/>It's a movement.</h2>
+    <p>1,300+ brands and creators building faster with AI.</p>
+    <!-- TODO: Replace divs with real student/community photos -->
+    <div class="community-grid">
+      <div class="photo" style="background:#dbeafe;">👩</div>
+      <div class="photo" style="background:#1e40af;">👩🏾</div>
+      <div class="photo" style="background:#1a1a2e;">👨🏽</div>
+      <div class="photo" style="background:#e0e7ff;">🧍‍♀️</div>
+      <div class="photo" style="background:#bfdbfe;">👱‍♀️</div>
+      <div class="photo" style="background:#1d4ed8;">🧍‍♂️</div>
+      <div class="photo" style="background:#eff6ff;">👩🏽</div>
+      <div class="photo" style="background:#1e3a8a;">👨🏿</div>
+      <div class="photo" style="background:#dbeafe;">👩🏻</div>
+      <div class="photo" style="background:#0a0a0a;">👱</div>
+      <div class="photo" style="background:#93c5fd;">👩🏾</div>
+      <div class="photo" style="background:#1d4ed8;">👨</div>
+    </div>
   </div>
 </div>
 
 <!-- INSTRUCTORS -->
 <div class="instructors">
-  <h2>Meet your instructors</h2>
-  <p>Hi, we're Adriana and Nik. We've been building brands across Silicon Valley, Dubai, Asia, and Europe, and no matter how big the brand, they all had one thing in common.</p>
-  <p>They struggled with content. The branding was strong, the website was polished, but producing content was slow, expensive, and hard to scale. AI changed that, and Claude changed it again. With Claude running your content workflow, brands can finally produce at scale without losing quality or voice.</p>
-  <p>That's why we built this course.</p>
-  <!-- Replace this div with <img src="adriana-and-nik.jpg" alt="Adriana and Nik" /> -->
-  <div class="instructor-photo">📸 Adriana &amp; Nik</div>
+  <div class="section-header">
+    <span class="label">Your instructors</span>
+    <h2>Meet Adriana &amp; Nik</h2>
+    <p>The people behind the system</p>
+  </div>
+  <div class="instructor-card">
+    <!-- TODO: Replace with: <img src="adriana-and-nik.jpg" alt="Adriana and Nik" style="width:100%;height:260px;object-fit:cover;" /> -->
+    <div class="instructor-photo">📸 Add your photo here</div>
+    <div class="instructor-body">
+      <h3>Adriana &amp; Nik</h3>
+      <p class="instructor-role">Founders, Mobile Editing Club</p>
+      <p>We've been building brands across Silicon Valley, Dubai, Asia, and Europe. No matter how big the brand, they all had the same problem: producing content was slow, expensive, and impossible to scale without growing the team.</p>
+      <p>AI changed that — and Claude changed it again. We built this course because we've seen firsthand what a Claude-powered content workflow can unlock, and we wanted every brand to have access to it.</p>
+      <ul class="instructor-creds">
+        <li>Brand-building experience across Silicon Valley, Dubai, Asia &amp; Europe</li>
+        <li>1,300+ students trained across our courses and programmes</li>
+        <li>Specialists in AI-first content workflows for product and service brands</li>
+        <li>Founded Mobile Editing Club to make professional content production accessible to every brand</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <!-- FAQ -->
 <div class="faq-section">
-  <h2>FAQs</h2>
-  <p class="faq-sub">Curious? Let's Clear Things Up.</p>
-  <div class="faq-list">
-    <details>
-      <summary>Do I need experience with Claude or AI?<span class="faq-icon">+</span></summary>
-      <p>No experience needed. The course is designed for beginners and walks you through everything step by step — from setting up Claude to running full content workflows.</p>
-    </details>
-    <details>
-      <summary>What tools do I need?<span class="faq-icon">+</span></summary>
-      <p>You'll need access to Claude (a free plan works to start), and optionally Figma and Notion. We cover setup for all tools inside the course.</p>
-    </details>
-    <details>
-      <summary>Can I use my own brand and products?<span class="faq-icon">+</span></summary>
-      <p>Absolutely. Every workflow in the course is designed to be applied to your own brand and product catalogue from day one.</p>
-    </details>
-    <details>
-      <summary>Can I use this for a service business?<span class="faq-icon">+</span></summary>
-      <p>Yes. While many examples use product brands, the systems for content repurposing, ad generation, and brand voice work equally well for service-based businesses.</p>
-    </details>
+  <div class="faq-inner">
+    <div class="section-header">
+      <span class="label">FAQ</span>
+      <h2>Common questions</h2>
+      <p>Everything you need to know before enrolling.</p>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Do I need experience with Claude or AI?</summary>
+        <p>No experience needed. The course is designed for beginners and walks you through everything step by step — from setting up Claude to running full content workflows. Module 1 covers the complete setup.</p>
+      </details>
+      <details>
+        <summary>What tools do I need?</summary>
+        <p>You'll need access to Claude (a free plan works to start). Figma and Notion are optional — free tiers work for both, and we cover setup for every tool inside the course.</p>
+      </details>
+      <details>
+        <summary>Can I use my own brand and products?</summary>
+        <p>Absolutely. Every workflow is designed to plug straight into your own brand, product catalogue, and brand guidelines from day one. You'll be applying it to your actual content as you go through the modules.</p>
+      </details>
+      <details>
+        <summary>Can I use this for a service business?</summary>
+        <p>Yes. While many examples use product brands, the systems for content repurposing, ad generation, and brand voice work equally well for service-based businesses, agencies, and personal brands.</p>
+      </details>
+      <details>
+        <summary>How long do I have access?</summary>
+        <p>Lifetime access — and you get all future updates to the course as the tools evolve. In the AI space that means the course keeps improving after you buy it.</p>
+      </details>
+      <details>
+        <summary>What if it's not right for me?</summary>
+        <p>We offer a 30-day money-back guarantee. Go through the course, apply the workflows, and if you don't see results, email us and we'll refund you in full — no questions asked.</p>
+      </details>
+    </div>
   </div>
 </div>
 
-<!-- FINAL CTA CARD -->
-<div class="final-wrap">
+<!-- FINAL CTA -->
+<div class="final-section">
   <div class="final-card">
-    <h2>Scale your brand's content<br/>production with Claude.</h2>
-    <p>Enroll today and build the content workflow your brand needs.</p>
-    <a href="#pricing" class="btn-final">Enroll Today</a>
+    <h2>Build the content workflow<br/>your brand has been<br/>waiting for.</h2>
+    <p>1,300+ brands are already using this system. The launch price won't last.</p>
+    <div class="final-price-row">
+      <span class="final-price-old">$399</span>
+      <span class="final-price-now">$299 today</span>
+    </div>
+    <!-- TODO: Replace href with your checkout URL -->
+    <a href="YOUR_CHECKOUT_URL" class="btn-final">Enroll Now — $299</a>
+    <p class="final-sub">30-day money-back guarantee · Lifetime access · Instant start</p>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
+  <div class="footer-logo">Plan With Isaac</div>
   <div class="social-icons">
-    <!-- Instagram -->
-    <a href="#" aria-label="Instagram">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+    <a href="https://www.instagram.com/planwithisaac/" aria-label="Instagram" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
     </a>
-    <!-- LinkedIn -->
-    <a href="#" aria-label="LinkedIn">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.5"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 0 0-4 0"/></svg>
+    <a href="https://www.tiktok.com/@planwithisaac.com" aria-label="TikTok" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
     </a>
-    <!-- YouTube -->
-    <a href="#" aria-label="YouTube">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><polygon points="10,9 15,12 10,15" fill="currentColor" stroke="none"/></svg>
+    <a href="https://www.youtube.com/@planwithisaac" aria-label="YouTube" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><polygon points="10,9 15,12 10,15" fill="currentColor" stroke="none"/></svg>
     </a>
   </div>
-  <p>© 2026 Mobile Editing Club. All rights reserved.</p>
+  <p>© 2026 Plan With Isaac · Mobile Editing Club. All rights reserved.</p>
 </footer>
 
 </body>

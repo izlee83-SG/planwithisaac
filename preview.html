@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan With Isaac — Singapore New Launch Property</title>
+  <meta name="description" content="New launch condos & ECs — honest analysis, VVIP previews, and a clear plan from first showflat to keys in hand. At zero cost to you as a buyer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: #F4F3EE;
+      color: #1A1C18;
+      line-height: 1.55;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    :root {
+      --bg:      #F4F3EE;
+      --dark:    #1A1C18;
+      --green:   #C8FF00;
+      --white:   #FFFFFF;
+      --border:  #DDD9CF;
+      --muted:   #6B6A63;
+      --max:     1080px;
+    }
+
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* ── SECTION LABELS ── */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .section-label::before { content: "×"; color: var(--green); font-size: .9rem; }
+
+    /* ── TYPOGRAPHY ── */
+    .serif-italic {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+    .highlight {
+      background: var(--green);
+      padding: 0 3px;
+      border-radius: 2px;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-green {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green);
+      color: var(--dark);
+      padding: 12px 22px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: .88rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--dark);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: .88rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      color: var(--dark);
+      border: 1.5px solid #C0BDB5;
+      padding: 11px 22px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: .88rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(244,243,238,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-left {
+      display: flex; align-items: center; gap: 8px;
+      font-size: .9rem; font-weight: 700; color: var(--dark);
+    }
+    .nav-logo-icon {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .65rem; font-weight: 900; color: var(--dark);
+    }
+    .nav-links {
+      display: none;
+      list-style: none;
+      gap: 28px;
+    }
+    @media (min-width: 768px) {
+      .nav-links { display: flex; }
+      .nav-links a { font-size: .85rem; font-weight: 500; color: var(--muted); }
+      .nav-links a:hover { color: var(--dark); }
+    }
+    .nav-right {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .nav-whatsapp {
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--muted);
+      display: none;
+    }
+    @media (min-width: 640px) { .nav-whatsapp { display: block; } }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 80px 24px 64px;
+      max-width: var(--max);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green);
+      color: var(--dark);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .hero-badge-dot { width: 6px; height: 6px; background: var(--dark); border-radius: 50%; }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      margin-bottom: 16px;
+    }
+    .hero h1 .serif-italic {
+      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+      display: block;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    /* Dashboard mockup */
+    .dashboard {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: left;
+      box-shadow: 0 8px 40px rgba(0,0,0,.07);
+    }
+    .dashboard-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      background: #FAFAF8;
+    }
+    .dashboard-dot {
+      width: 10px; height: 10px; border-radius: 50%; background: #E0DDD8;
+    }
+    .dashboard-url {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-left: 8px;
+    }
+    .dashboard-inner {
+      display: flex;
+      min-height: 220px;
+    }
+    .dashboard-sidebar {
+      width: 140px;
+      flex-shrink: 0;
+      border-right: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .dashboard-sidebar-label {
+      font-size: .64rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0 14px 10px;
+    }
+    .dashboard-nav-item {
+      padding: 7px 14px;
+      font-size: .78rem;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+    }
+    .dashboard-nav-item.active {
+      background: var(--green);
+      color: var(--dark);
+      font-weight: 700;
+      border-radius: 0 6px 6px 0;
+      margin-right: 8px;
+    }
+    .dashboard-main { flex: 1; padding: 16px 20px; }
+    .dashboard-breadcrumb {
+      font-size: .68rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .dashboard-title { font-size: 1rem; font-weight: 700; margin-bottom: 14px; }
+    .dashboard-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .dashboard-stat-box { }
+    .dashboard-stat-num { font-size: 1.1rem; font-weight: 800; color: var(--dark); }
+    .dashboard-stat-label { font-size: .65rem; color: var(--muted); margin-top: 1px; }
+    .dashboard-img-placeholder {
+      background: #E8E6DF;
+      border-radius: 8px;
+      height: 80px;
+      display: flex;
+      align-items: flex-end;
+      padding: 8px 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    .dashboard-img-label {
+      font-size: .62rem;
+      font-weight: 700;
+      background: rgba(0,0,0,.5);
+      color: #fff;
+      padding: 3px 7px;
+      border-radius: 4px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    /* ── DEVELOPER STRIP ── */
+    .dev-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 24px;
+    }
+    .dev-strip-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .dev-strip-label {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .dev-logos {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .dev-logo {
+      font-size: .8rem;
+      font-weight: 600;
+      color: #9A9890;
+    }
+
+    /* ── HOW I PLAN ── */
+    .how-section {
+      padding: 88px 24px;
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .how-section p {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--dark);
+    }
+    .how-section .serif-italic { font-size: 1.25rem; }
+
+    /* ── STATS ── */
+    .stats-row {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+    @media (min-width: 640px) { .stats-row { grid-template-columns: repeat(4, 1fr); } }
+    .stat-item {
+      padding: 32px 24px;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-item:nth-child(2n) { border-right: none; }
+    @media (min-width: 640px) {
+      .stat-item:nth-child(2n) { border-right: 1px solid var(--border); }
+      .stat-item:last-child { border-right: none; }
+    }
+    .stat-num {
+      font-size: 2.6rem;
+      font-weight: 900;
+      letter-spacing: -.05em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── THE SERVICE ── */
+    .service-section {
+      padding: 88px 24px;
+    }
+    .service-header {
+      max-width: var(--max);
+      margin: 0 auto 48px;
+    }
+    .service-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+    .service-header p { font-size: .95rem; color: var(--muted); }
+    .service-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 768px) { .service-grid { grid-template-columns: 1fr 1fr; } }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .service-card.featured { grid-column: 1/-1; }
+    .service-tag {
+      display: inline-block;
+      background: var(--green);
+      color: var(--dark);
+      font-size: .6rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .service-icon {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+    .service-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .service-card p {
+      font-size: .85rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    /* CLI mockup */
+    .cli-box {
+      background: #1A1C18;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: .73rem;
+      color: #C8FF00;
+      line-height: 1.8;
+    }
+    .cli-box .cli-prompt { color: rgba(200,255,0,.5); }
+    .cli-box .cli-result { color: rgba(255,255,255,.6); margin-top: 6px; }
+    .cli-box .cli-check { color: #C8FF00; }
+    /* Milestone tracker */
+    .milestone-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-top: 4px; }
+    .milestone-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .82rem;
+    }
+    .milestone-item:last-child { border-bottom: none; }
+    .milestone-left { display: flex; align-items: center; gap: 10px; }
+    .milestone-dot {
+      width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0;
+    }
+    .milestone-dot.done { background: var(--green); }
+    .milestone-dot.active { background: var(--green); box-shadow: 0 0 0 3px rgba(200,255,0,.25); }
+    .milestone-dot.pending { background: var(--border); }
+    .milestone-year { font-size: .75rem; color: var(--muted); }
+
+    /* ── CURRENT LAUNCHES ── */
+    .launches-section { padding: 88px 24px; background: var(--white); }
+    .launches-header {
+      max-width: var(--max);
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+    .launches-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      margin-bottom: 10px;
+    }
+    .launches-header h2 .serif-italic { font-size: inherit; }
+    .launches-header p { font-size: .9rem; color: var(--muted); }
+    .launches-grid {
+      max-width: var(--max);
+      margin: 0 auto 24px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    @media (min-width: 640px) { .launches-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 900px) { .launches-grid { grid-template-columns: repeat(4, 1fr); } }
+    .launch-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      background: var(--bg);
+    }
+    .launch-card-icon {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      opacity: .5;
+    }
+    .launch-card h4 { font-size: .88rem; font-weight: 700; margin-bottom: 3px; }
+    .launch-card span { font-size: .75rem; color: var(--muted); }
+    .launches-footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      text-align: center;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── FEATURED LAUNCH ── */
+    .featured-section { padding: 88px 24px; }
+    .featured-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .featured-inner h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+    .featured-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    @media (min-width: 768px) { .featured-layout { grid-template-columns: 1fr 1fr; align-items: start; } }
+    .featured-img {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #D8D4C8;
+      height: 280px;
+      display: flex;
+      align-items: flex-end;
+      padding: 14px;
+      position: relative;
+    }
+    .featured-img-label {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,.9);
+      color: var(--dark);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .featured-content h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      margin-bottom: 10px;
+    }
+    .featured-content h3 .serif-italic { font-size: inherit; }
+    .featured-content > p {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+    .featured-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+    .featured-bullets li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: .85rem;
+      line-height: 1.5;
+    }
+    .bullet-icon {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .6rem;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 1px;
+      color: var(--dark);
+    }
+    .featured-link {
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border-bottom: 1.5px solid var(--dark);
+      padding-bottom: 1px;
+    }
+
+    /* ── ROADMAP ── */
+    .roadmap-section { padding: 0 24px 88px; }
+    .roadmap-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    @media (min-width: 768px) { .roadmap-inner { grid-template-columns: 1fr 1fr; align-items: start; } }
+    .roadmap-content h3 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      margin-bottom: 10px;
+    }
+    .roadmap-content h3 .serif-italic { font-size: inherit; }
+    .roadmap-content > p {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .roadmap-steps { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .roadmap-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: .85rem;
+      line-height: 1.5;
+    }
+    .step-num {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .65rem;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 1px;
+      color: var(--dark);
+    }
+    .roadmap-img {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #D0CCC0;
+      height: 260px;
+      display: flex; align-items: flex-start; padding: 12px;
+    }
+    .roadmap-img-tag {
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,.9);
+      color: var(--dark);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* ── TESTIMONIAL ── */
+    .testi-section {
+      background: var(--white);
+      padding: 88px 24px;
+    }
+    .testi-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .testi-quote {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+    .testi-quote .highlight { font-style: normal; }
+    .testi-attr { font-size: .82rem; color: var(--muted); }
+
+    /* ── BUYER PATHS ── */
+    .paths-section { padding: 88px 24px; }
+    .paths-header {
+      max-width: var(--max);
+      margin: 0 auto 16px;
+      text-align: center;
+    }
+    .paths-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+    .paths-sub {
+      font-size: .9rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+    }
+    .paths-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 768px) { .paths-grid { grid-template-columns: repeat(3, 1fr); } }
+    .path-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+    }
+    .path-card.featured {
+      background: var(--dark);
+      color: #fff;
+      border-color: var(--dark);
+      position: relative;
+    }
+    .path-most-common {
+      position: absolute;
+      top: -12px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--green);
+      color: var(--dark);
+      font-size: .62rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .path-type { font-size: .8rem; font-weight: 600; color: var(--muted); margin-bottom: 8px; }
+    .path-card.featured .path-type { color: rgba(255,255,255,.5); }
+    .path-price {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      margin-bottom: 2px;
+    }
+    .path-price-note { font-size: .72rem; color: var(--muted); margin-bottom: 14px; }
+    .path-card.featured .path-price-note { color: rgba(255,255,255,.4); }
+    .path-desc { font-size: .82rem; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+    .path-card.featured .path-desc { color: rgba(255,255,255,.55); }
+    .path-items { list-style: none; display: flex; flex-direction: column; gap: 8px; flex: 1; margin-bottom: 20px; }
+    .path-items li {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: .82rem;
+      line-height: 1.4;
+    }
+    .path-items li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      flex-shrink: 0;
+      font-size: .8rem;
+    }
+    .path-card.featured .path-items li { color: rgba(255,255,255,.8); }
+
+    /* ── VVIP CTA ── */
+    .vvip-section {
+      background: #F0F4E8;
+      padding: 88px 24px;
+      text-align: center;
+    }
+    .vvip-inner { max-width: 560px; margin: 0 auto; }
+    .vvip-inner h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+    .vvip-inner h2 .serif-italic { font-size: inherit; }
+    .vvip-inner p { font-size: .9rem; color: var(--muted); margin-bottom: 28px; line-height: 1.65; }
+    .vvip-ctas { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      padding: 56px 24px 0;
+      color: rgba(255,255,255,.6);
+      overflow: hidden;
+      position: relative;
+    }
+    .footer-top {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding-bottom: 48px;
+    }
+    @media (min-width: 640px) { .footer-top { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+    .footer-brand { }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-size: .88rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .footer-logo-icon {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .55rem;
+      font-weight: 900;
+      color: var(--dark);
+    }
+    .footer-tagline { font-size: .8rem; line-height: 1.6; max-width: 180px; }
+    .footer-col h4 {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 14px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: .82rem; color: rgba(255,255,255,.6); }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-watermark {
+      text-align: center;
+      font-size: 14vw;
+      font-weight: 900;
+      letter-spacing: -.05em;
+      color: rgba(255,255,255,.04);
+      line-height: .8;
+      margin-top: 8px;
+      user-select: none;
+    }
+    .footer-bottom {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 16px 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .72rem;
+      color: rgba(255,255,255,.3);
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .footer-bottom-links { display: flex; gap: 16px; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <div class="nav-logo-icon">PI</div>
+    Plan with Isaac
+  </div>
+  <ul class="nav-links">
+    <li><a href="#featured">Featured</a></li>
+    <li><a href="#launches">Launches</a></li>
+    <li><a href="#service">How I work</a></li>
+    <li><a href="#paths">Buyer paths</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-whatsapp">WhatsApp Isaac</span>
+    <a href="YOUR_WHATSAPP_URL" class="btn-green">Register VVIP →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">
+    <span class="hero-badge-dot"></span>
+    NEW · Thomson Reserve preview opens Q3 2026
+  </div>
+  <h1>
+    See the future of<br/>Singapore property.
+    <span class="serif-italic">Plan it with me.</span>
+  </h1>
+  <p class="hero-sub">New launch condos &amp; ECs — honest analysis, VVIP previews, and a clear plan from first showflat to keys in hand. At zero cost to you as a buyer.</p>
+  <div class="hero-ctas">
+    <a href="#featured" class="btn-green">Explore Thomson Reserve →</a>
+    <a href="#launches" class="btn-outline">See all launches</a>
+  </div>
+
+  <!-- Dashboard mockup -->
+  <div class="dashboard">
+    <div class="dashboard-bar">
+      <div class="dashboard-dot"></div>
+      <div class="dashboard-dot"></div>
+      <div class="dashboard-dot"></div>
+      <span class="dashboard-url">planwithisaac.com/launch-radar</span>
+    </div>
+    <div class="dashboard-inner">
+      <div class="dashboard-sidebar">
+        <div class="dashboard-sidebar-label">Launch Radar</div>
+        <div class="dashboard-nav-item active">Overview</div>
+        <div class="dashboard-nav-item">Thomson Reserve</div>
+        <div class="dashboard-nav-item">EC eligibility</div>
+        <div class="dashboard-nav-item">Financing</div>
+        <div class="dashboard-nav-item">Timeline</div>
+      </div>
+      <div class="dashboard-main">
+        <div class="dashboard-breadcrumb">Welcome back</div>
+        <div class="dashboard-title">Your 2026 launch watchlist</div>
+        <div class="dashboard-stats">
+          <div class="dashboard-stat-box">
+            <div class="dashboard-stat-num">1,240</div>
+            <div class="dashboard-stat-label">Units at Thomson Reserve</div>
+          </div>
+          <div class="dashboard-stat-box">
+            <div class="dashboard-stat-num">D20</div>
+            <div class="dashboard-stat-label">Bright Hill Drive</div>
+          </div>
+          <div class="dashboard-stat-box">
+            <div class="dashboard-stat-num">TEL</div>
+            <div class="dashboard-stat-label">Upper Thomson MRT</div>
+          </div>
+          <div class="dashboard-stat-box">
+            <div class="dashboard-stat-num">Q3 '26</div>
+            <div class="dashboard-stat-label">VVIP preview</div>
+          </div>
+        </div>
+        <div class="dashboard-img-placeholder">
+          <span class="dashboard-img-label">Thomson Reserve · Upper Thomson</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DEVELOPER STRIP -->
+<div class="dev-strip">
+  <div class="dev-strip-inner">
+    <div class="dev-strip-label">Guiding buyers into launches by</div>
+    <div class="dev-logos">
+      <span class="dev-logo">UOL Group</span>
+      <span class="dev-logo">CapitaLand</span>
+      <span class="dev-logo">Singapore Land</span>
+      <span class="dev-logo">Hoi Hup Realty</span>
+      <span class="dev-logo">Sim Lian</span>
+      <span class="dev-logo">MCL Land</span>
+      <span class="dev-logo">GuocoLand</span>
+    </div>
+  </div>
+</div>
+
+<!-- HOW I PLAN -->
+<div class="how-section">
+  <div class="section-label">How I plan</div>
+  <p>I'm a planner at heart and a property nerd by obsession. Most agents make you feel like you need <span class="serif-italic">a finance degree to buy a home.</span> I think the magic happens when <span class="highlight">the jargon disappears</span> — so you can spend your energy on choosing the right home, not decoding the market.</p>
+</div>
+
+<!-- STATS -->
+<div class="container">
+  <div class="stats-row">
+    <div class="stat-item">
+      <div class="stat-num">12+</div>
+      <div class="stat-label">Years in new launches</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Families guided</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">28</div>
+      <div class="stat-label">Districts covered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">0$</div>
+      <div class="stat-label">Cost to buyers</div>
+    </div>
+  </div>
+</div>
+
+<!-- THE SERVICE -->
+<div class="service-section" id="service">
+  <div class="service-header">
+    <div class="section-label">The service</div>
+    <h2>From first showflat to<br/><span class="serif-italic">keys in hand</span> in one plan.</h2>
+    <p>Six things I do for every buyer. Use one, or run the whole journey end-to-end.</p>
+  </div>
+  <div class="service-grid">
+
+    <!-- New launch picks -->
+    <div class="service-card featured">
+      <div class="service-tag">Core</div>
+      <h3>New launch picks</h3>
+      <p>A shortlist built from your budget, family size and school plans — not from whoever pays the highest commission.</p>
+      <div class="cli-box">
+        <div class="cli-prompt">$ isaac shortlist --budget 2.1m --beds 4</div>
+        <div class="cli-result">
+          <div><span class="cli-check">✓</span> Thomson Reserve · D20 · TEL doorstep</div>
+          <div><span class="cli-check">✓</span> Pinery Residences · Tampines North</div>
+          <div><span class="cli-check">✓</span> 3 more watched...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- After-sales care -->
+    <div class="service-card">
+      <div class="service-icon">📅</div>
+      <h3>After-sales care</h3>
+      <p>Progressive payment reminders, reno-ready handover checks and a resale review at year four. The plan doesn't stop at the option fee.</p>
+      <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Your milestones</div>
+      <ul class="milestone-list">
+        <li class="milestone-item">
+          <div class="milestone-left"><div class="milestone-dot done"></div>Option exercised</div>
+          <span class="milestone-year" style="color:var(--green);font-weight:700;">Done</span>
+        </li>
+        <li class="milestone-item">
+          <div class="milestone-left"><div class="milestone-dot active"></div>20% — foundation stage</div>
+          <span class="milestone-year">2024</span>
+        </li>
+        <li class="milestone-item">
+          <div class="milestone-left"><div class="milestone-dot pending"></div>TOP &amp; key collection</div>
+          <span class="milestone-year">2030</span>
+        </li>
+        <li class="milestone-item">
+          <div class="milestone-left"><div class="milestone-dot pending"></div>MOP / resale review</div>
+          <span class="milestone-year">2034</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- EC Eligibility -->
+    <div class="service-card">
+      <div class="service-icon">🎯</div>
+      <h3>EC eligibility</h3>
+      <p>Income ceilings, MOP rules, citizenship mix — know exactly which schemes you qualify for before you fall in love with a unit.</p>
+    </div>
+
+    <!-- Financing -->
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h3>Financing &amp; timeline</h3>
+      <p>TDSR, LTV, progressive payments and bridging — a month-by-month cash plan from booking fee to key collection.</p>
+    </div>
+
+    <!-- Showflat tours -->
+    <div class="service-card">
+      <div class="service-icon">🏛</div>
+      <h3>Showflat tours</h3>
+      <p>Curated, appointment-only visits. I walk the stacks with you and tell you which units to skip — and why.</p>
+    </div>
+
+    <!-- Entry & exit strategy -->
+    <div class="service-card">
+      <div class="service-icon">📈</div>
+      <h3>Entry &amp; exit strategy</h3>
+      <p>Buy with the resale story already mapped: upcoming supply, MRT lines, school zones and en-bloc cycles.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- CURRENT LAUNCHES -->
+<div class="launches-section" id="launches">
+  <div class="launches-header">
+    <div class="section-label">Current launches</div>
+    <h2>Every 2026 launch,<br/><span class="serif-italic">tracked in one place.</span></h2>
+    <p>Condos and ECs across the island — ask me about any of them.</p>
+  </div>
+  <div class="launches-grid">
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>Thomson Reserve</h4><span>D20 · Upper Thomson</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>Pinery Residences</h4><span>Tampines North</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>Aurelie of Tampines</h4><span>EC · Tampines St 66</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>Lentor Series</h4><span>D20 · Lentor Hills</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>One Marina Gardens</h4><span>D01 · Marina South</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>Bloomsbury Residence</h4><span>D05 · Media Circle</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>River Modern</h4><span>D09 · Great World</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>Narra Residences</h4><span>D26 · Dairy Farm</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>Skye / Penrith</h4><span>D03 · Margaret Drive</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>Upperhouse / Opus</h4><span>D10 · Orchard Road</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>Coastal Cabana</h4><span>D18 · Tampines Road</span></div>
+    <div class="launch-card"><div class="launch-card-icon">🏢</div><h4>Novo Place</h4><span>EC · Tengah</span></div>
+  </div>
+  <div class="launches-footer">20+ active launches · VVIP previews · Developer price lists on request</div>
+</div>
+
+<!-- FEATURED LAUNCH -->
+<div class="featured-section" id="featured">
+  <div class="featured-inner">
+    <div class="section-label">Featured launch</div>
+    <h2>A launch that feels like <span class="serif-italic">a once-a-decade entry.</span></h2>
+    <div class="featured-layout">
+      <div class="featured-img">
+        <!-- Replace with: <img src="thomson-reserve.jpg" alt="Thomson Reserve" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" /> -->
+        <span class="featured-img-label">Thomson Reserve · Bright Hill Drive</span>
+      </div>
+      <div class="featured-content">
+        <h3>The Upper Thomson <span class="serif-italic">mega-launch.</span></h3>
+        <p>The former Thomson View site reborn: ~1,240 homes on a fresh 99-year lease by UOL, Singapore Land and CapitaLand — the island's most-watched launch of 2026.</p>
+        <ul class="featured-bullets">
+          <li>
+            <div class="bullet-icon">A</div>
+            Upper Thomson MRT (TEL) at the doorstep — one stop to Caldecott interchange
+          </li>
+          <li>
+            <div class="bullet-icon">B</div>
+            Within 1km of Ai Tong School; Thomson Plaza directly across the road
+          </li>
+          <li>
+            <div class="bullet-icon">C</div>
+            1-bed to 5-bed across a 5-hectare site with lagoon pool, tennis courts and clubhouse
+          </li>
+        </ul>
+        <a href="YOUR_WHATSAPP_URL" class="featured-link">Register for the VVIP preview →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ROADMAP -->
+<div class="roadmap-section">
+  <div class="roadmap-inner">
+    <div class="roadmap-content">
+      <h3>A roadmap, not <span class="serif-italic">a sales pitch.</span></h3>
+      <p>Before preview day you'll know your numbers, your stacks, and your fallback plan. Booking day becomes a confirmation — not a gamble.</p>
+      <ul class="roadmap-steps">
+        <li class="roadmap-step">
+          <div class="step-num">1</div>
+          Week 1 — eligibility, TDSR and a hard budget ceiling
+        </li>
+        <li class="roadmap-step">
+          <div class="step-num">2</div>
+          Week 2 — site visit, stack analysis and unit shortlist
+        </li>
+        <li class="roadmap-step">
+          <div class="step-num">3</div>
+          Preview day — priority queue, price list in hand, book or walk
+        </li>
+      </ul>
+      <a href="YOUR_WHATSAPP_URL" class="featured-link">Start your plan →</a>
+    </div>
+    <div class="roadmap-img">
+      <!-- Replace with: <img src="showflat.jpg" alt="Showflat by appointment" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" /> -->
+      <span class="roadmap-img-tag">Showflat · By appointment</span>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="testi-section">
+  <div class="testi-inner">
+    <div class="testi-quote">
+      "We viewed eleven showflats in three months and got nowhere. Isaac shortlisted two projects, ran the numbers, and we booked our unit <span class="highlight">in a week.</span>"
+    </div>
+    <div class="testi-attr">The Tan family — HDB upgraders, now at Tampines North</div>
+  </div>
+</div>
+
+<!-- BUYER PATHS -->
+<div class="paths-section" id="paths">
+  <div class="paths-header">
+    <div class="section-label">Buyer paths</div>
+    <h2>Start where you are.<br/><span class="serif-italic">I'll map the rest.</span></h2>
+  </div>
+  <p class="paths-sub">Buyer representation is free — I'm paid by developers, never by you. Same plan, same care, whichever path you're on.</p>
+  <div class="paths-grid">
+
+    <div class="path-card">
+      <div class="path-type">First-time / EC buyer</div>
+      <div class="path-price">Free</div>
+      <div class="path-price-note">for buyers, always</div>
+      <div class="path-desc">For couples and young families entering the market through an EC or first condo.</div>
+      <ul class="path-items">
+        <li>Eligibility &amp; grant check</li>
+        <li>Income ceiling planning</li>
+        <li>First showflat accompaniment</li>
+        <li>Booking-day support</li>
+      </ul>
+      <a href="YOUR_WHATSAPP_URL" class="btn-dark">Start with a chat →</a>
+    </div>
+
+    <div class="path-card featured">
+      <div class="path-most-common">Most common</div>
+      <div class="path-type">HDB upgrader</div>
+      <div class="path-price">Free</div>
+      <div class="path-price-note">for buyers, always</div>
+      <div class="path-desc">Sell your flat and move up without bridging stress or double-mortgage months.</div>
+      <ul class="path-items">
+        <li>Sell-first vs buy-first timeline</li>
+        <li>CPF refund &amp; cash-flow map</li>
+        <li>Contra / bridging planning</li>
+        <li>Unit &amp; stack selection</li>
+        <li>Resale review at year 4</li>
+      </ul>
+      <a href="YOUR_WHATSAPP_URL" class="btn-green">Plan my upgrade →</a>
+    </div>
+
+    <div class="path-card">
+      <div class="path-type">Investor</div>
+      <div class="path-price">Free</div>
+      <div class="path-price-note">for buyers, always</div>
+      <div class="path-desc">Entry price discipline, rental yield maths and a written exit thesis before you commit.</div>
+      <ul class="path-items">
+        <li>Supply pipeline analysis</li>
+        <li>Yield &amp; breakeven model</li>
+        <li>ABSD scenario planning</li>
+        <li>Exit window mapping</li>
+      </ul>
+      <a href="YOUR_WHATSAPP_URL" class="btn-dark">Talk strategy →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- VVIP CTA -->
+<div class="vvip-section">
+  <div class="vvip-inner">
+    <h2>Your VVIP slot,<br/><span class="serif-italic">secured before launch day.</span></h2>
+    <p>Thomson Reserve previews Q3 2026. Join the waitlist now and get the price list, floor plans and balloting updates the moment they drop.</p>
+    <div class="vvip-ctas">
+      <a href="YOUR_WHATSAPP_URL" class="btn-green">Register interest on WhatsApp →</a>
+      <a href="#launches" class="btn-outline">Browse launches first</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">PI</div>
+        Plan with Isaac
+      </div>
+      <div class="footer-tagline">Singapore new-launch property planned right. See the future — plan it with me.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Launches</h4>
+      <ul>
+        <li><a href="#">Thomson Reserve</a></li>
+        <li><a href="#">Pinery Residences</a></li>
+        <li><a href="#">Aurelie of Tampines</a></li>
+        <li><a href="#">Lentor Series</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Guides</h4>
+      <ul>
+        <li><a href="#">EC eligibility</a></li>
+        <li><a href="#">HDB upgrading</a></li>
+        <li><a href="#">Financing &amp; TDSR</a></li>
+        <li><a href="#">Buyer timeline</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://wa.me/YOUR_NUMBER">WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/planwithisaac/">Instagram</a></li>
+        <li><a href="https://www.youtube.com/@planwithisaac">YouTube</a></li>
+        <li><a href="https://www.tiktok.com/@planwithisaac.com">TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-watermark">ISAAC</div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025–2026 planwithisaac.com · All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">RES#</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
