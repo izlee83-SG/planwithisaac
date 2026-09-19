@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  fb-privyr-integration:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fb-privyr-integration
+    ports:
+      - "3000:3000"
+    environment:
+      - FB_VERIFY_TOKEN=${FB_VERIFY_TOKEN}
+      - FB_ACCESS_TOKEN=${FB_ACCESS_TOKEN}
+      - FB_PAGE_ID=${FB_PAGE_ID}
+      - PRIVYR_API_KEY=${PRIVYR_API_KEY}
+      - PRIVYR_API_BASE=https://app.privyr.com/api
+      - PORT=3000
+      - NODE_ENV=production
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - fb-privyr-network
+
+networks:
+  fb-privyr-network:
+    driver: bridge
+
+# Usage:
+# 1. Create .env file with your credentials
+# 2. Run: docker-compose up -d
+# 3. Check logs: docker-compose logs -f
+# 4. Stop: docker-compose down

@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "SessionStart": {
+      "command": "npm install && npm run dev",
+      "shell": "bash",
+      "description": "Auto-install dependencies and start server"
+    }
+  },
+  "allowlist": [
+    "npm install",
+    "npm run dev",
+    "npm run test",
+    "node test-integration.js",
+    "git status",
+    "git add",
+    "git commit",
+    "git push"
+  ]
+}
