@@ -157,6 +157,21 @@ function transformLeadForPrivyr(fbLead, adSetConfig) {
  */
 async function sendToPrivyr(lead) {
   try {
+    // Demo mode for testing
+    if (PRIVYR_API_KEY && PRIVYR_API_KEY.startsWith('test_')) {
+      console.log(`\n📧 DEMO MODE: Lead ready for Privyr`);
+      console.log(`   Name: ${lead.firstName} ${lead.lastName}`);
+      console.log(`   Email: ${lead.email}`);
+      console.log(`   Phone: ${lead.phone}`);
+      console.log(`   Source: ${lead.source}`);
+      console.log(`   Campaign: ${lead.campaign}\n`);
+      return {
+        success: true,
+        message: 'DEMO: Lead processed and ready for Privyr',
+        lead: lead
+      };
+    }
+
     const response = await axios.post(
       `${PRIVYR_API_BASE}/leads/create`,
       {
