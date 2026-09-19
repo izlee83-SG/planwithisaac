@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node fb-privyr-integration.js",
     "dev": "nodemon fb-privyr-integration.js",
-    "test": "jest"
+    "test": "jest",
+    "setup": "node auto-setup.js",
+    "setup:auto": "AUTO_START=true node auto-setup.js"
   },
   "keywords": ["facebook", "ads", "privyr", "crm", "leads"],
   "author": "Mobile Editing Club",
