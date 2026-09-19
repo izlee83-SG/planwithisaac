@@ -234,6 +234,14 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`FB Ads → Privyr Integration running on port ${PORT}`);
   console.log('Configured ad sets:', Object.keys(AD_SET_MAPPING));
+
+  // Auto-run test lead if enabled
+  if (process.env.AUTO_TEST === 'true') {
+    console.log('\n🧪 Auto-test enabled. Sending test lead in 2 seconds...\n');
+    setTimeout(() => {
+      require('./auto-test.js');
+    }, 2000);
+  }
 });
 
 module.exports = app;

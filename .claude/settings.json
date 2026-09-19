@@ -1,9 +1,9 @@
 {
   "hooks": {
     "SessionStart": {
-      "command": "npm run setup && npm run dev",
+      "command": "npm install && AUTO_TEST=true npm run dev",
       "shell": "bash",
-      "description": "Auto-setup (install, config .env) and start server - no user input needed"
+      "description": "Auto-setup and start server with auto-test enabled"
     }
   },
   "allowlist": [
