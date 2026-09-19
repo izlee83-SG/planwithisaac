@@ -13,6 +13,12 @@ const PRIVYR_API_BASE = 'https://app.privyr.com/api';
 
 // Ad set mapping configuration
 const AD_SET_MAPPING = {
+  'thomson_reserve': {
+    name: 'Thomson Reserve - Instant Form - Copy Test',
+    leadSource: 'facebook_thomson_reserve',
+    campaign: 'thomson_reserve_course',
+    formId: 'thomson_reserve_instant_form'
+  },
   'thompson': {
     name: 'Thompson Ad Set',
     leadSource: 'facebook_thompson',
